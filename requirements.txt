@@ -7,3 +7,5 @@ partial
 gc
 tensorflow
 scikit-learn
+keras-nlp
+-e .
