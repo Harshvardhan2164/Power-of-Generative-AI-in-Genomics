@@ -41,14 +41,14 @@ def read_lm(n):
 
 def get_train_text():
     print('Train Data is being prepared.')
-    text_train = get_formatted_data('./cleaned_dataset/train.csv')
+    text_train = get_formatted_data('../cleaned_dataset/train.csv')
     print('Train Data is Ready.')
 
     return text_train
 
 def get_test_text():
     print('Test Data is Being Prepared.')
-    text_test = get_formatted_data('./cleaned_dataset/test.csv')
+    text_test = get_formatted_data('../cleaned_dataset/test.csv')
     print('Test Data is Ready.')
 
     return text_test
