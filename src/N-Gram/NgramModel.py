@@ -1,4 +1,5 @@
 import numpy as np
+import sys
 from nltk.util import ngrams
 from nltk.lm.preprocessing import pad_both_ends, flatten
 from nltk.lm import MLE
@@ -10,24 +11,31 @@ import gc
 import pickle
 import json
 from functools import partial
+from logger import logging
+from exception import CustomException
 
 def main():
-    for i in range(6):
-        random.seed(638)
-        largest_value, WILL_TRAIN_FROM_SCRATCH  = i+1, True
-        if WILL_TRAIN_FROM_SCRATCH:
-            lm = get_comprehensive_lm(largest_value)
-        else:
-            lm = read_lm(largest_value)
-        n_candidates, perp_values = list(range(largest_value, largest_value + 1)), []
-        for n in n_candidates:
-            print(n, ' Started.')
-            perp = get_performance_for_n_gram(n, lm)
-            gc.collect()
-            perp_values.append(perp)
-            print(n, ' is completed. Perplexity value: ', perp)
-        write_results(n_candidates, perp_values, largest_value)
-        plot_perp_values(perp_values, n_candidates, largest_value)
+    try:
+        for i in range(6):
+            random.seed(638)
+            largest_value, WILL_TRAIN_FROM_SCRATCH  = i+1, True
+            if WILL_TRAIN_FROM_SCRATCH:
+                lm = get_comprehensive_lm(largest_value)
+            else:
+                lm = read_lm(largest_value)
+            n_candidates, perp_values = list(range(largest_value, largest_value + 1)), []
+            for n in n_candidates:
+                print(n, ' Started.')
+                perp = get_performance_for_n_gram(n, lm)
+                gc.collect()
+                perp_values.append(perp)
+                print(n, ' is completed. Perplexity value: ', perp)
+            write_results(n_candidates, perp_values, largest_value)
+            plot_perp_values(perp_values, n_candidates, largest_value)
+            
+            logging.info("Model Prediction Completed")
+    except Exception as e:
+        raise CustomException(e, sys)
 
 def read_lm(n):
     print('Language Model is being read.')
