@@ -9,7 +9,6 @@
   - [LSTM Model](#lstm-model)
   - [Transformer Model](#transformer-model)
 - [Installation](#installation)
-- [Usage](#usage)
 - [Evaluation Metrics](#evaluation-metrics)
 - [Results](#results)
 - [Future Work](#future-work)
