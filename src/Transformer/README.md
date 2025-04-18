@@ -12,8 +12,8 @@ Defined at the beginning of the script:
 - `VOCAB_SIZE = 5000`: Number of unique tokens in the dataset
 - `SEQ_LEN = 1000`: Maximum sequence length
 - `EMBED_DIM = 128`: Embedding dimension
-- `LSTM_DIM = 64`: Transformer layer dimension
-- `NUM_LAYERS = 2`: Number of LSTM layers
+- `TRANSFORMER_DIM = 64`: Transformer layer dimension
+- `NUM_LAYERS = 2`: Number of Transformer layers
 - `LR = 1e-3`: Learning rate for the optimizer
 
 ### **Dataset**
@@ -32,9 +32,9 @@ Expected outputs:
 ## **Results**
 | Model         | Perplexity Score |
 |--------------|--------------|
-| LSTM (2 layers) | 3.70       |
-| LSTM (4 layers) | 3.71       |
-| LSTM (4 layers) | 3.68       |
-| LSTM (5 layers) | 3.69       |
+| 2 layers | 3.70       |
+| 4 layers | 3.71       |
+| 4 layers | 3.68       |
+| 5 layers | 3.69       |
 
 Lower perplexity scores indicate better model performance.
