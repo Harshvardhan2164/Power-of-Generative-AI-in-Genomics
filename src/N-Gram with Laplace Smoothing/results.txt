@@ -1,6 +1,15 @@
+1. Using Normal Dataset
+
 No. of candidates   -->         Perplexity Score
         6           -->        3.8616488768282546
         7           -->        3.839022537717976
         8           -->        3.8262975800581267
         9           -->        3.8174240549010275
         10          -->        3.675776266318712
+
+2. Using Synthetic Dataset
+
+No. of mutations    -->         Perplexity Score
+        1           -->               0.650
+        5           -->               0.740
+        10          -->               0.787

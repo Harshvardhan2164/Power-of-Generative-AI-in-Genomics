@@ -68,48 +68,19 @@ Ensure you have Python **3.8+** installed, then install required libraries:
 pip install -r requirements.txt
 ```
 
-<!-- ## **Usage**
-
-### **1. Training the Models**
-#### **Train the N-Gram Model**
-```bash
-python train_ngram.py --n 3
-```
-
-#### **Train the LSTM Model**
-```bash
-python LSTM/NgramModel.py
-```
-
-#### **Train the Transformer Model**
-```bash
-python train_transformer.py --epochs 20 --batch_size 32
-```
-
-### **2. Testing the Models**
-#### **Evaluate Perplexity on a Test Sequence**
-```bash
-python evaluate.py --model ngram --n 3 --sequence ATCGGTA
-```
-
-#### **Predict Next Nucleotide**
-```bash
-python predict.py --model lstm --sequence ATCGGTA
-```-->
-
 ## **Evaluation Metrics**
 We use **perplexity** to evaluate model performance:
 - Lower perplexity = **better model predictions**.
 - N-gram models typically have higher perplexity than LSTMs and Transformers.
 
-<!-- ## **Results**
+## **Results**
 | Model         | Perplexity |
 |--------------|-----------|
 | N-Gram (n=3) | 3.8       |
 | LSTM         | 2.9       |
 | Transformer  | 2.5       |
 
-Transformers perform best due to their ability to capture long-range dependencies. -->
+Transformers perform best due to their ability to capture long-range dependencies.
 
 ## **Future Work**
 - Implement **Bidirectional LSTMs** to improve accuracy.
