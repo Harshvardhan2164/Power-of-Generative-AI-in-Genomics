@@ -1,0 +1,6 @@
+1. Using Synthetic Dataset
+
+No. of mutations    -->         Perplexity Score
+        1           -->               0.652
+        5           -->               0.700
+        10          -->               0.755
