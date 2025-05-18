@@ -1,0 +1,8 @@
+[PAD]
+[UNK]
+[BOS]
+[EOS]
+A
+C
+G
+T
